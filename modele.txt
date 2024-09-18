@@ -1,0 +1,27 @@
+ER Model to Relational Diagram
+Hotel
+  Hotel_ID (Primary Key)
+  Hotel_Name
+  City
+Room
+  Room_ID (Primary Key)
+  Room_Type
+  Price
+  Hotel_ID (Foreign Key)
+Customer
+  Customer_ID (Primary Key)
+  First_Name
+  Last_Name
+  Phone_Number
+Reservation
+  Reservation_ID (Primary Key)
+  Check_in_Date
+  Check_out_Date
+  Customer_ID (Foreign Key to Customer)
+  Room_ID (Foreign Key to Room)
+Relational Diagram Explanation
+Hotel to Room: One-to-Many relationship, meaning a hotel can have many rooms. This is represented by the Hotel_ID as a foreign key in the Room table.
+
+Room to Reservation: One-to-Many relationship, meaning a room can have many reservations. This is represented by the Room_ID as a foreign key in the Reservation table.
+
+Customer to Reservation: One-to-Many relationship, meaning a customer can make multiple reservations. This is represented by the Customer_ID as a foreign key in the Reservation table.
